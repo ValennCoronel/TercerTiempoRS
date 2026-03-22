@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,800;1,800;1,900&amp;family=Work+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#93000a",
+              "surface-tint": "#ffb3ad",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-variant": "#353534",
+              "tertiary-container": "#a01820",
+              "on-error": "#690005",
+              "outline-variant": "#5b403e",
+              "secondary": "#c6c7c2",
+              "on-tertiary-container": "#ffb0aa",
+              "on-primary-fixed": "#410004",
+              "on-secondary": "#2f312e",
+              "error": "#ffb4ab",
+              "surface-bright": "#393939",
+              "on-primary-fixed-variant": "#930013",
+              "surface-container-low": "#1c1b1b",
+              "surface-dim": "#131313",
+              "inverse-primary": "#b91b24",
+              "outline": "#ab8986",
+              "background": "#131313",
+              "primary": "#ffb3ad",
+              "primary-container": "#a50418",
+              "tertiary-fixed-dim": "#ffb3ae",
+              "on-tertiary": "#68000b",
+              "surface": "#131313",
+              "primary-fixed-dim": "#ffb3ad",
+              "secondary-container": "#484a46",
+              "on-secondary-fixed-variant": "#454744",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed-dim": "#c6c7c2",
+              "on-surface": "#e5e2e1",
+              "tertiary": "#ffb3ae",
+              "on-tertiary-fixed-variant": "#910817",
+              "on-primary": "#68000a",
+              "on-tertiary-fixed": "#410004",
+              "inverse-surface": "#e5e2e1",
+              "inverse-on-surface": "#313030",
+              "tertiary-fixed": "#ffdad7",
+              "on-secondary-container": "#b8b9b4",
+              "on-background": "#e5e2e1",
+              "on-primary-container": "#ffafa9",
+              "surface-container-high": "#2a2a2a",
+              "surface-container-highest": "#353534",
+              "surface-container": "#201f1f",
+              "on-surface-variant": "#e4beba",
+              "primary-fixed": "#ffdad7",
+              "secondary-fixed": "#e3e3de",
+              "on-secondary-fixed": "#1a1c19"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .grainy-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            opacity: 0.05;
+            pointer-events: none;
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+        }
+        .skew-title {
+            transform: skewX(-12deg);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<div class="grainy-texture"></div>
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full flex justify-between items-center px-6 py-4 max-w-none bg-[#131313] z-50 backdrop-blur-md no-border">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black italic tracking-tighter text-[#a50418] font-headline skew-title cursor-pointer">TERCER TIEMPO</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-headline italic font-black uppercase tracking-tighter leading-[0.85] text-[#a50418] border-b-4 border-[#a50418] pb-1 hover:scale-105 transition-all duration-200" href="#">HOME</a>
+<a class="font-headline italic font-black uppercase tracking-tighter leading-[0.85] text-white opacity-80 hover:opacity-100 transition-opacity hover:text-[#a50418] hover:scale-105 transition-all duration-200" href="#">NUEVO DROP</a>
+<a class="font-headline italic font-black uppercase tracking-tighter leading-[0.85] text-white opacity-80 hover:opacity-100 transition-opacity hover:text-[#a50418] hover:scale-105 transition-all duration-200" href="#">STORE</a>
+<a class="font-headline italic font-black uppercase tracking-tighter leading-[0.85] text-white opacity-80 hover:opacity-100 transition-opacity hover:text-[#a50418] hover:scale-105 transition-all duration-200" href="#">ABOUT</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-white hover:text-[#a50418] transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</nav>
+<main class="relative min-h-screen px-6 py-12 md:px-12">
+<!-- Editorial Header -->
+<header class="mb-20">
+<h1 class="font-headline font-black italic text-[5rem] md:text-[8rem] leading-[0.8] tracking-tighter text-on-surface skew-title mb-2">THE ARCHIVE</h1>
+<p class="font-label uppercase tracking-[0.4em] text-xs md:text-sm font-bold text-primary-container pl-4 border-l-4 border-primary-container">1990S RUGBY HERITAGE COLLECTIONS</p>
+</header>
+<div class="flex flex-col md:flex-row gap-12">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-64 shrink-0 space-y-12">
+<section>
+<h3 class="font-label uppercase tracking-[0.3em] text-[10px] font-bold text-secondary mb-6 flex items-center gap-2">
+<span class="w-2 h-2 bg-primary-container"></span> DROPS
+                    </h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-4 h-4 border-2 border-outline-variant group-hover:border-primary-container transition-colors"></div>
+<span class="font-label uppercase tracking-widest text-xs font-bold text-on-surface-variant group-hover:text-on-surface">SPRING '99</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-4 h-4 border-2 border-primary-container bg-primary-container"></div>
+<span class="font-label uppercase tracking-widest text-xs font-bold text-on-surface">VINTAGE CLASSICS</span>
+</label>
+</div>
+</section>
+<section>
+<h3 class="font-label uppercase tracking-[0.3em] text-[10px] font-bold text-secondary mb-6 flex items-center gap-2">
+<span class="w-2 h-2 bg-primary-container"></span> COUNTRIES
+                    </h3>
+<div class="grid grid-cols-2 gap-2">
+<button class="px-3 py-2 border border-outline-variant text-[10px] font-bold uppercase tracking-widest hover:bg-on-surface hover:text-surface transition-all">ARGENTINA</button>
+<button class="px-3 py-2 border border-outline-variant text-[10px] font-bold uppercase tracking-widest hover:bg-on-surface hover:text-surface transition-all">NZ</button>
+<button class="px-3 py-2 border border-outline-variant text-[10px] font-bold uppercase tracking-widest hover:bg-on-surface hover:text-surface transition-all">FRANCE</button>
+<button class="px-3 py-2 border border-outline-variant text-[10px] font-bold uppercase tracking-widest hover:bg-on-surface hover:text-surface transition-all">UK</button>
+</div>
+</section>
+<section>
+<h3 class="font-label uppercase tracking-[0.3em] text-[10px] font-bold text-secondary mb-6 flex items-center gap-2">
+<span class="w-2 h-2 bg-primary-container"></span> STATUS
+                    </h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between group cursor-pointer">
+<span class="font-label uppercase tracking-widest text-xs font-bold text-on-surface-variant">LIMITED DROP</span>
+<span class="text-[10px] font-bold text-primary-container">12</span>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<span class="font-label uppercase tracking-widest text-xs font-bold text-on-surface-variant">NO RESTOCK</span>
+<span class="text-[10px] font-bold text-primary-container">05</span>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<span class="font-label uppercase tracking-widest text-xs font-bold text-on-surface-variant">UNIQUE SIZE</span>
+<span class="text-[10px] font-bold text-primary-container">03</span>
+</div>
+</div>
+</section>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">
+<!-- Product Card 1 -->
+<div class="group relative bg-surface-container-low">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Vintage blue and white striped rugby jersey with Puma logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfpQM43_GDKDxbJfd1oWo6mM64kR3lJHFlNwltYTslbjEzVIthdlI8YREbgF9qwO8GPpwGGlisQ2IogewdGAu4ebf4hFbRUabuiqNghQoN82q1BIXxo5Z4UGC-jHPmYhJD7SrsIrSSnW0plQwjYuxuYHS1UD0sHlQM2aq4O1QFsYXFgvPRJnQS4sBGHehptQL0MB0mP-CYTJssK9sC7i9crdv_uXg5awtsxvYjy-R6wIlP4GDha87rBMZedtMM3YPAn4VTB-qPcQ8"/>
+<div class="absolute top-4 left-[-10px] bg-primary-container text-white px-4 py-1 skew-x-[-15deg] z-20">
+<span class="font-label uppercase tracking-[0.2em] text-[10px] font-black italic block skew-x-[15deg]">LIMITED DROP</span>
+</div>
+</div>
+<div class="pt-6 pb-2 space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-black italic text-xl tracking-tighter uppercase leading-none group-hover:text-primary-container transition-colors">PUMAS 1999 JERSEY</h3>
+<span class="font-headline italic font-black text-lg text-on-surface">$245</span>
+</div>
+<p class="font-label uppercase tracking-[0.2em] text-[10px] text-secondary font-bold">ARGENTINA ARCHIVE / SIZE L</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-surface-container-low">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Classic black rugby polo with silver fern embroidery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQEvt806VefhjLGX1DrEvZbz3ZLD4YXG7JKhyphu4HwLDamHlYMzsz4bxBy-8fdDX-fVZIcdQ_-Mn01HSM1gTSyEXbd3U1ua0wF7V5wlgpixjlFwTxnNeFm65RcFrxoCT-KzTDsYlmqi-C1T7At8GEhWzL-yiQPZajpgqFqORInsVT28taZRD9EWh3O310kyuJUtFsLQBbsGn7qc2qPA-lMO33xNHKdEgzqgs7Fx_J5ui40nj4zo7owQuGaX2ZVTkLCcyDmDaIPOw"/>
+<div class="absolute bottom-4 right-4 bg-on-surface text-surface px-4 py-1 z-20">
+<span class="font-label uppercase tracking-[0.2em] text-[10px] font-black italic block">NO RESTOCK</span>
+</div>
+</div>
+<div class="pt-6 pb-2 space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-black italic text-xl tracking-tighter uppercase leading-none group-hover:text-primary-container transition-colors">ALL BLACKS CLASSIC</h3>
+<span class="font-headline italic font-black text-lg text-on-surface">$280</span>
+</div>
+<p class="font-label uppercase tracking-[0.2em] text-[10px] text-secondary font-bold">NZ HERITAGE / SIZE XL</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-surface-container-low">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Vintage red rugby jersey with white collar and crest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP8sQJoYCk1Ums2F7SYAhWrD9wyB15vfHymOK5-mRLyXXAci7JCm_uHy8wyGqj5kz7hj7Fz01usw7JlveT6LS0mjILeYZ9LTaeLuAWejSkVKuk2tfUjw-_x52VkIxa6_hcmIoi-6rnRpi5OvAelNY9A9nKbNVW3wjoEjVh77fmm5bQ1nrSoR1wUxvq2ysodnD-J5pVjY1UdhabhLQnpqGS5UlRYAFffVARTzFllrnBZLEenRDJgMe-UIKbXsZ1N620EPLvsoMdMDo"/>
+<div class="absolute top-4 right-[-10px] bg-primary-container text-white px-4 py-1 skew-x-[-15deg] z-20">
+<span class="font-label uppercase tracking-[0.2em] text-[10px] font-black italic block skew-x-[15deg]">UNIQUE SIZE</span>
+</div>
+</div>
+<div class="pt-6 pb-2 space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-black italic text-xl tracking-tighter uppercase leading-none group-hover:text-primary-container transition-colors">RED DRAGON '92</h3>
+<span class="font-headline italic font-black text-lg text-on-surface">$195</span>
+</div>
+<p class="font-label uppercase tracking-[0.2em] text-[10px] text-secondary font-bold">WALES ARCHIVE / SIZE M</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative bg-surface-container-low">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="White vintage long sleeve rugby shirt with green details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9bv1ffKixVckDOmViLU0Vvdw-p74OfG713FerEfFacWFYox6WM9pBb_o1Sxv9AcQ_Muy9e61LXDCHPvihhLHnJZZR3XG_fP5wzLjj_0GywP3VOUhaSm_u1-DkofrHgyeJXg5YHmctJaax0qP9mhXrpFIKqMwiKoFnQPwJRFfILr6GUBhPA8AFeopJQ9Hot7VorwMtbjAff0mcBG0FGfX3aDt-5_4SmE0K1qMj1xL_eoErArxMlylpJgYC5z1tGblznQu5DTVaDig"/>
+</div>
+<div class="pt-6 pb-2 space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-black italic text-xl tracking-tighter uppercase leading-none group-hover:text-primary-container transition-colors">SPRINGBOKS '95</h3>
+<span class="font-headline italic font-black text-lg text-on-surface">$310</span>
+</div>
+<p class="font-label uppercase tracking-[0.2em] text-[10px] text-secondary font-bold">SA HERITAGE / SIZE XL</p>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative bg-surface-container-low">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Deep blue vintage rugby shirt with thick white collar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsANGJnXbN143sdPu6db_TmWxmSylBMe5hvpMgOX3VcVGIGjL-qLm4mX7epri2C9l9kdCO-OMetQ5nSevvGgCkTqwjOsXc25fb999tcHptLFlkVCGyTFMw7G1eF3v-d0dD79ym71VgGCn3XI8R0-TzisDV_kKkrq3i1UVAsB96DGuvHA_IOfQNoNMn6u9TW1IqHolMu6irrawIO0cbehd1dpuA4q-8WNNdLjVGLMQbQpoa5UtZpYyi9mL3--45KONv9OkjuhidIiI"/>
+<div class="absolute top-4 left-[-10px] bg-primary-container text-white px-4 py-1 skew-x-[-15deg] z-20">
+<span class="font-label uppercase tracking-[0.2em] text-[10px] font-black italic block skew-x-[15deg]">LIMITED DROP</span>
+</div>
+</div>
+<div class="pt-6 pb-2 space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-black italic text-xl tracking-tighter uppercase leading-none group-hover:text-primary-container transition-colors">LES BLEUS ARCHIVE</h3>
+<span class="font-headline italic font-black text-lg text-on-surface">$225</span>
+</div>
+<p class="font-label uppercase tracking-[0.2em] text-[10px] text-secondary font-bold">FRANCE 90S / SIZE L</p>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative bg-surface-container-low">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Gold and green retro rugby training top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwtZUfXhXLWlHfMthEC_WK4unOUlRzE45xTPHM3AdpgLtomVuFdqcVS_lDzhpZUWDPgq91pV3MKMWDD6UtEFlshGII0jmQBM47CFhUlSFG6u_TVLK7-W_kxrr5SsFeT9int_s0PIvxZ5kZRDj4JQC7JrI1FXQrEOnziG8VOjl-C7Rmr3HhrJdSrtkWsHnkalntIFdlQ-8QoA1-qwI3lco4UiuV4YVDi6EPcZnG27Rp0_cABfpyiqK3Z3WmMbGG5USglx-JWaA5Lcg"/>
+</div>
+<div class="pt-6 pb-2 space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-black italic text-xl tracking-tighter uppercase leading-none group-hover:text-primary-container transition-colors">WALLABIES '91</h3>
+<span class="font-headline italic font-black text-lg text-on-surface">$180</span>
+</div>
+<p class="font-label uppercase tracking-[0.2em] text-[10px] text-secondary font-bold">AUS ARCHIVE / SIZE M</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Marquee Ticker -->
+<div class="w-full bg-primary-container overflow-hidden py-3 mb-20 relative z-20">
+<div class="whitespace-nowrap flex animate-marquee">
+<span class="font-headline font-black italic text-white text-2xl tracking-tighter uppercase px-4">THE BLOOD AND MUD ARCHIVE — 1990S RUGBY HERITAGE — LIMITED DROPS ONLY — WORLDWIDE SHIPPING — VINTAGE RESTORED — </span>
+<span class="font-headline font-black italic text-white text-2xl tracking-tighter uppercase px-4">THE BLOOD AND MUD ARCHIVE — 1990S RUGBY HERITAGE — LIMITED DROPS ONLY — WORLDWIDE SHIPPING — VINTAGE RESTORED — </span>
+</div>
+</div>
+<!-- Footer -->
+<footer class="flex flex-col items-center w-full px-8 text-center border-t border-transparent bg-[#0e0e0e] pb-12 pt-20">
+<div class="text-4xl font-black italic text-[#a50418] font-headline mb-4 skew-title">TERCER TIEMPO</div>
+<nav class="flex gap-8 mb-8">
+<a class="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500 hover:text-white transition-colors duration-300" href="#">INFO</a>
+<a class="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500 hover:text-white transition-colors duration-300" href="#">INSTAGRAM</a>
+<a class="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500 hover:text-white transition-colors duration-300" href="#">TERMS</a>
+</nav>
+<p class="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500">© 2024 TERCER TIEMPO RUGBY STORE. ALL RIGHTS RESERVED.</p>
+</footer>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+    </style>
+</body></html>

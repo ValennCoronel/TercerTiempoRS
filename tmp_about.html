@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ABOUT | TERCER TIEMPO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@1,800;1,900&amp;family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "error-container": "#93000a",
+                "surface-tint": "#ffb3ad",
+                "surface-container-lowest": "#0e0e0e",
+                "surface-variant": "#353534",
+                "tertiary-container": "#a01820",
+                "on-error": "#690005",
+                "outline-variant": "#5b403e",
+                "secondary": "#c6c7c2",
+                "on-tertiary-container": "#ffb0aa",
+                "on-primary-fixed": "#410004",
+                "on-secondary": "#2f312e",
+                "error": "#ffb4ab",
+                "surface-bright": "#393939",
+                "on-primary-fixed-variant": "#930013",
+                "surface-container-low": "#1c1b1b",
+                "surface-dim": "#131313",
+                "inverse-primary": "#b91b24",
+                "outline": "#ab8986",
+                "background": "#131313",
+                "primary": "#ffb3ad",
+                "primary-container": "#a50418",
+                "tertiary-fixed-dim": "#ffb3ae",
+                "on-tertiary": "#68000b",
+                "surface": "#131313",
+                "primary-fixed-dim": "#ffb3ad",
+                "secondary-container": "#484a46",
+                "on-secondary-fixed-variant": "#454744",
+                "on-error-container": "#ffdad6",
+                "secondary-fixed-dim": "#c6c7c2",
+                "on-surface": "#e5e2e1",
+                "tertiary": "#ffb3ae",
+                "on-tertiary-fixed-variant": "#910817",
+                "on-primary": "#68000a",
+                "on-tertiary-fixed": "#410004",
+                "inverse-surface": "#e5e2e1",
+                "inverse-on-surface": "#313030",
+                "tertiary-fixed": "#ffdad7",
+                "on-secondary-container": "#b8b9b4",
+                "on-background": "#e5e2e1",
+                "on-primary-container": "#ffafa9",
+                "surface-container-high": "#2a2a2a",
+                "surface-container-highest": "#353534",
+                "surface-container": "#201f1f",
+                "on-surface-variant": "#e4beba",
+                "primary-fixed": "#ffdad7",
+                "secondary-fixed": "#e3e3de",
+                "on-secondary-fixed": "#1a1c19"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Work Sans"],
+                "label": ["Work Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .grainy-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+        }
+        .skew-active { transform: skewX(-12deg); }
+        .mask-distress {
+            -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+            mask-image: linear-gradient(to bottom, black, transparent);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white">
+<!-- Grain Overlay -->
+<div class="fixed inset-0 pointer-events-none grainy-bg z-[60]"></div>
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full flex justify-between items-center px-6 py-4 max-w-none bg-[#1c1b1b] z-50 backdrop-blur-md">
+<div class="text-2xl font-black italic tracking-tighter text-[#a50418] font-headline">TERCER TIEMPO</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-headline italic font-black uppercase tracking-tighter leading-[0.85] text-white opacity-80 hover:opacity-100 transition-opacity hover:text-[#a50418] hover:scale-105 transition-all duration-200" href="#">HOME</a>
+<a class="font-headline italic font-black uppercase tracking-tighter leading-[0.85] text-white opacity-80 hover:opacity-100 transition-opacity hover:text-[#a50418] hover:scale-105 transition-all duration-200" href="#">NUEVO DROP</a>
+<a class="font-headline italic font-black uppercase tracking-tighter leading-[0.85] text-white opacity-80 hover:opacity-100 transition-opacity hover:text-[#a50418] hover:scale-105 transition-all duration-200" href="#">STORE</a>
+<a class="font-headline italic font-black uppercase tracking-tighter leading-[0.85] text-[#a50418] border-b-4 border-[#a50418] pb-1 skew-active transition-transform" href="#">ABOUT</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="text-white hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative w-full h-[819px] flex flex-col justify-end px-6 pb-20 overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 z-0">
+<img alt="Vintage Rugby Scrum" class="w-full h-full object-cover grayscale mix-blend-luminosity opacity-40" data-alt="Gritty vintage rugby scrum in black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL80aQNZPacwSLi9X-dDurTxsx1X9bRSbyONOKb1TeuYXeu65QD5kQJ-wccpcaVjgOH4QTW-5uQnQKWUbdQoCnJ3e7NZu_ct0dr5bjTlvqoAEfgggQXFYdGQQOljuYzgh5itw1S4eBRL3yhmlBVTm58vpn_SPNp3zdjA2u17Q-Nai3k1h1Z2CzVrShxHib_jxw_jdAmCeGiWjVPQ6IzfwwCS9a4-1EPKeTVGHbSjIacyEuUx5NcJRUWFcmVET-cEeZeHt9CIxJY4I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-6xl mx-auto w-full">
+<p class="font-label text-[10px] tracking-[0.3em] font-bold text-primary-container mb-4 uppercase">EST. 1994 // ARCHIVE DIVISION</p>
+<h1 class="font-headline italic font-black text-6xl md:text-9xl leading-[0.85] tracking-tighter uppercase mb-6">
+                    ABOUT<br/>TERCER<br/><span class="text-primary-container">TIEMPO</span>
+</h1>
+</div>
+</section>
+<!-- Marquee -->
+<div class="bg-primary-container py-3 overflow-hidden whitespace-nowrap border-y border-transparent">
+<div class="inline-block animate-marquee font-headline italic font-black text-white text-2xl uppercase tracking-tight">
+                MUD SWEAT AND GLORY   //   NO COLLECTIONS JUST DROPS   //   THE ARCHIVE IS OPEN   //   MUD SWEAT AND GLORY   //   NO COLLECTIONS JUST DROPS   //   THE ARCHIVE IS OPEN   //  
+            </div>
+</div>
+<!-- Heritage Content -->
+<section class="py-32 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-7 space-y-12">
+<div class="space-y-6">
+<h2 class="font-headline italic font-black text-5xl uppercase tracking-tighter leading-none">ARCHIVING<br/>RUGBY CULTURE</h2>
+<div class="h-1 w-24 bg-primary-container"></div>
+<p class="text-secondary text-xl leading-relaxed max-w-2xl font-body">
+                        We don't do seasons. We don't do trends. TERCER TIEMPO is a visceral response to the sanitization of modern sport. We hunt for the grit, the mud-stained collars, and the heavy cotton weight of the 90s era. 
+                    </p>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl font-body">
+                        Our pieces are sourced, restored, or reimagined to carry the weight of the pitch. Every drop is a fragment of history, curated for those who understand that the real game starts when the whistle blows for full-time.
+                    </p>
+</div>
+<div class="p-8 bg-surface-container-low border-l-8 border-primary-container relative overflow-hidden">
+<h3 class="font-headline italic font-black text-3xl uppercase tracking-tighter mb-4">LIMITED DROPS.<br/>NO RESTOCK.</h3>
+<p class="text-on-surface-variant font-body">Once it's gone, it returns to the archive. We prioritize the rarity of the find over the volume of the sale. This is not a store; it is a repository of heritage.</p>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="inventory_2">inventory_2</span>
+</div>
+</div>
+</div>
+<!-- Polaroid Section -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end">
+<div class="relative group">
+<!-- Polaroid Frame -->
+<div class="bg-[#e5e2e1] p-4 pb-16 shadow-2xl rotate-3 transition-transform group-hover:rotate-0 duration-500">
+<div class="aspect-[4/5] overflow-hidden bg-black relative">
+<img alt="Rugby Heritage" class="w-full h-full object-cover grayscale contrast-125 mix-blend-multiply opacity-90" data-alt="Monochrome close up of a vintage leather rugby ball" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp1kvxzn3HAgZgwJ0VmReIlHBs3yEIzDiJA3xq73CoNtoMY80-ag1p1OmIjUeP8R8gCoY1cHgFydcdo-mj8_ObDhTuiY9wYs0kclhJUuY9jGC7eVj2x8z9MhxPLDgJduOUXJxspD7B1uGVpoo_ybzlwrmvLohh8S1M44FmWEt-y6Km_C4VTy_n6X9_6gEV8YX81e36fd2aZPacAXBuAAYnXbCHreM-qPGVurtyyCoWgmcJW-FCz6j3pTWDb2wQQpgnB010F1l3fyE"/>
+<div class="absolute inset-0 bg-primary-container/10"></div>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<p class="font-headline italic font-black text-black text-2xl uppercase tracking-tighter">NO COLLECTIONS</p>
+<p class="font-label text-[10px] text-black/60 tracking-widest mt-1">REF: TT-092-B</p>
+</div>
+</div>
+<!-- Decorative Tape -->
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-10 bg-white/20 backdrop-blur-sm -rotate-2 z-10 border border-white/10"></div>
+</div>
+</div>
+</section>
+<!-- Technical Specs -->
+<section class="bg-surface-container-lowest py-24 px-6 border-t border-transparent">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col">
+<span class="font-label text-[10px] tracking-[0.3em] font-bold text-primary-container mb-2">FABRIC</span>
+<span class="font-headline italic font-black text-2xl uppercase">400GSM COTTON</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label text-[10px] tracking-[0.3em] font-bold text-primary-container mb-2">SOURCE</span>
+<span class="font-headline italic font-black text-2xl uppercase">GLOBAL ARCHIVE</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label text-[10px] tracking-[0.3em] font-bold text-primary-container mb-2">FIT</span>
+<span class="font-headline italic font-black text-2xl uppercase">BOXER VINTAGE</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label text-[10px] tracking-[0.3em] font-bold text-primary-container mb-2">FINISH</span>
+<span class="font-headline italic font-black text-2xl uppercase">DISTRESSED OIL</span>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative py-40 px-6 overflow-hidden flex flex-col items-center justify-center text-center">
+<div class="absolute inset-0 bg-primary-container opacity-90 mix-blend-multiply"></div>
+<img alt="Background Texture" class="absolute inset-0 w-full h-full object-cover grayscale" data-alt="Abstract textured background with red tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_7XphmkuCnMhgkULZApYLu2fLcZo05Nb2R0kiurjzl1JQdv3ilX7aA8xyyrJ4BfyqVhUpibI9pK-AHM9EzIaOF9A0U0H3nw6Aur2gFGZqNqttt0YMQmn4QJ2rbNN3fVf24k4dX8JZ3epI-2obUscFVYjUl-TORWH2rza8wAUrzCFHTEhi2AY4878HGogfYo_wDGp8tfgZ_s6ZI7sGjxNFXoHs4omjLQaDe1yZmIYFW-Mv2mp7pbjvpMX7JUM54muVjQjKGCCwWAY"/>
+<div class="relative z-10">
+<h2 class="font-headline italic font-black text-6xl md:text-8xl text-white uppercase tracking-tighter leading-none mb-8">JOIN THE<br/>SQUADRON</h2>
+<button class="bg-white text-black font-headline italic font-black text-xl px-12 py-4 uppercase tracking-tighter hover:bg-[#a50418] hover:text-white transition-all transform hover:-skew-x-12">
+                    ACCESS LATEST DROP
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col items-center w-full px-8 text-center border-t border-transparent bg-[#0e0e0e] pb-12 pt-20">
+<div class="text-4xl font-black italic text-[#a50418] mb-4 font-headline">TERCER TIEMPO</div>
+<div class="flex space-x-8 mb-8">
+<a class="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500 hover:text-white transition-colors duration-300" href="#">INFO</a>
+<a class="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500 hover:text-white transition-colors duration-300" href="#">INSTAGRAM</a>
+<a class="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500 hover:text-white transition-colors duration-300" href="#">TERMS</a>
+</div>
+<p class="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500">
+            © 2024 TERCER TIEMPO RUGBY STORE. ALL RIGHTS RESERVED.
+        </p>
+</footer>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+    </style>
+</body></html>

@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, Work_Sans } from "next/font/google";
+import TopNav from "@/components/TopNav";
 import "./globals.css";
 
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+});
+
+const work = Work_Sans({
+  subsets: ["latin"],
+  variable: "--font-work-sans",
+});
+
 export const metadata: Metadata = {
-  title: "Tercer Tiempo - Rugby Store",
-  description:
-    "Drops limitados de camisetas de rugby retro. Stock único, sin reposición.",
+  title: "TERCER TIEMPO | RUGBY ARCHIVE",
+  description: "A tribute to the mud, the grit, and the legendary battles of the 1999 World Cup. Restored archive classics for the modern fan.",
 };
 
 export default function RootLayout({
@@ -13,55 +24,53 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className="text-tt-beige antialiased">
-        <div className="min-h-screen flex flex-col">
-          <header>
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-              <div className="font-display text-xl tracking-[0.25em] uppercase">
-                Tercer Tiempo
-              </div>
-              <nav className="flex gap-6 text-sm uppercase tracking-[0.2em]">
-                <a href="/" className="nav-link">
-                  Shop
-                </a>
-                <a href="/nuevo-drop" className="nav-link">
-                  Nuevo Drop
-                </a>
-                <a href="/about" className="nav-link">
-                  About
-                </a>
-                <a href="/cart" className="nav-link">
-                  Cart
-                </a>
-              </nav>
-            </div>
-          </header>
+    <html lang="en" className="dark">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body
+        className={`${jakarta.variable} ${work.variable} bg-background text-on-background font-body selection:bg-primary-container selection:text-white overflow-x-hidden`}
+      >
+        <div className="fixed inset-0 pointer-events-none grainy-texture z-[100]"></div>
 
-          <main className="flex-1">
-            <div className="mx-auto max-w-6xl px-6 py-10">{children}</div>
-          </main>
+        <TopNav />
 
-          <footer className="py-6">
-            <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-xs uppercase tracking-[0.2em] text-tt-muted md:flex-row">
-              <span>Tercer Tiempo Rugby Store</span>
-              <div className="flex gap-4">
-                <a href="/" className="nav-link text-tt-muted">
-                  Shop
-                </a>
-                <a href="/nuevo-drop" className="nav-link text-tt-muted">
-                  Archive
-                </a>
-                <a href="/about" className="nav-link text-tt-muted">
-                  About
-                </a>
-                <a href="https://instagram.com" className="nav-link text-tt-muted">
-                  Instagram
-                </a>
-              </div>
-            </div>
-          </footer>
-        </div>
+        <main>
+          {children}
+        </main>
+
+        {/* Footer */}
+        <footer className="flex flex-col items-center w-full px-8 pb-12 pt-20 text-center border-t border-transparent bg-[#0e0e0e]">
+          <div className="text-4xl font-black italic text-[#a50418] mb-4 font-headline tracking-tighter uppercase">
+            TERCER TIEMPO
+          </div>
+          <div className="flex gap-8 mb-12">
+            <a
+              className="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500 hover:text-white transition-colors duration-300"
+              href="#"
+            >
+              INFO
+            </a>
+            <a
+              className="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500 hover:text-white transition-colors duration-300"
+              href="#"
+            >
+              INSTAGRAM
+            </a>
+            <a
+              className="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500 hover:text-white transition-colors duration-300"
+              href="#"
+            >
+              TERMS
+            </a>
+          </div>
+          <p className="font-['Work_Sans'] uppercase tracking-[0.3em] text-[10px] font-bold text-gray-500 opacity-60">
+            © 2024 TERCER TIEMPO RUGBY STORE. ALL RIGHTS RESERVED.
+          </p>
+        </footer>
       </body>
     </html>
   );
